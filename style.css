@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #222; */
+    background-image: url('image/wallpaper.png');
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+main {
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Andada Pro', serif;
+}
+
+p,
+button {
+    font-family: 'Archivo', sans-serif;
+}
+
+.header {
+    width: 80%;
+    height: 176px;
+    /* border: 1px solid red; */
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header .nav-links {
+
+    display: flex;
+    gap: 24px;
+}
+
+
+
+.nav-links .link {
+
+    width: 40px;
+    height: 40px;
+    background-color: #f8f8f850;
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    transition: all ease .5s;
+
+}
+
+.conteudo {
+
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red;  */
+    display: flex;
+
+}
+
+.descricao {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.descricao .titulo {
+    font-size: 64px;
+    line-height: 70px;
+    margin-bottom: 32px;
+    width: 400px;
+
+}
+
+.descricao .titulo-chapeu {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 24px;
+}
+
+.descricao p {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 32px;
+}
+
+.botoes {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 24px;
+}
+
+.botao {
+    width: 240px;
+    height: 52px;
+    border: 1px solid #f1A5B1;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: transparent;
+    transition: all ease .5s;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.botao-primario {
+    background-color: #f1A5B1;
+    color: #0B0A0A;
+
+}
+
+.ilustracao {
+    width: 100%;
+    height: 100%;
+    background-image: url(image/image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* border: 1px solid red; */
+
+}
+
+/* efeito hover */
+
+.link:hover {
+    background-color: #f1A5B1;
+    
+    transform: scale(1.1);
+}
+
+.botao-primario:hover, .botao-secundario:hover{
+
+    background-color: #f8f8f8;
+    color: #0B0A0A;
+    transform: scale(0.9);
+}
+
+
+/* media queries */
+
+@media(max-width: 2560px) {
+   
+    
+}
+@media (max-width: 1200px) {
+    body{
+        width: 100%;
+        height: 100%;
+        padding-inline: 5%;
+        margin-bottom: 5px;
+    }
+    .conteudo{
+        flex-direction: column;
+    }
+    .ilustracao{
+        height: 424px;
+        order: 1;
+        background-size: initial;
+        background-position: center;
+    }
+    .descricao{
+        order: 2;
+    }
+}
+@media (max-width: 768px) {
+    .header{
+        width: 100%;
+        height: 128px;
+        padding-inline: 5%;
+        margin-bottom: 5px;
+    }
+    .header .logo{
+        height: 64px;
+    }
+    .conteudo {
+        flex-direction: column;
+        align-items:center ;
+
+    }
+    .ilustracao{
+        order: 1;
+        align-items: center;
+        /* height: 240px; */
+        background-size: contain;
+        background-position: center;
+    }
+    .descricao .titulo-chapeu{
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+    .descricao .titulo{
+        font-size: 40px;
+        line-height: 44px;
+        font-weight: 800;
+        width: 270px;
+    }
+    .descricao p{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        
+    }
+   .botoes{
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 24px;
+   }
+   .botao{
+    width: 100%;
+   }
+}
+@media (max-width: 500px) {
+    .header{
+        
+        
+        justify-content: center;
+    }
+    .header .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .header{
+        
+        height: 96px;
+      
+    }
+    .header .logo{
+        height: 48px;
+    }
+    .ilustracao{
+        height: 184px;
+    }
+}
