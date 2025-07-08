@@ -61,5 +61,3 @@ Sinta-se à vontade para contribuir! Para isso, siga os passos:
 Este projeto está sob a licença MIT.
 
 ---
-
-Se precisar de um README já preenchido, envie mais informações sobre o projeto!
